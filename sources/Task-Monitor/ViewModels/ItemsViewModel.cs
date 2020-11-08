@@ -12,25 +12,25 @@ namespace TaskMonitor.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        private Item _selectedItem;
+        private Models.Task _selectedItem;
 
-        public ObservableCollection<Item> Items { get; }
+        public ObservableCollection<Models.Task> Items { get; }
         public Command LoadItemsCommand { get; }
         public Command AddItemCommand { get; }
-        public Command<Item> ItemTapped { get; }
+        public Command<Models.Task> ItemTapped { get; }
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Models.Task>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            ItemTapped = new Command<Item>(OnItemSelected);
+            ItemTapped = new Command<Models.Task>(this.OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
         }
 
-        async Task ExecuteLoadItemsCommand()
+        async System.Threading.Tasks.Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
 
@@ -59,7 +59,7 @@ namespace TaskMonitor.ViewModels
             SelectedItem = null;
         }
 
-        public Item SelectedItem
+        public Models.Task SelectedItem
         {
             get => _selectedItem;
             set
@@ -74,7 +74,7 @@ namespace TaskMonitor.ViewModels
             await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
-        async void OnItemSelected(Item item)
+        async void OnItemSelected(Models.Task item)
         {
             if (item == null)
                 return;

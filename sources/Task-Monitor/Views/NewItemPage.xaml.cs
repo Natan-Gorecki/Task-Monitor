@@ -11,7 +11,7 @@ namespace TaskMonitor.Views
 {
     public partial class NewItemPage : ContentPage
     {
-        public Item Item { get; set; }
+        public Task Item { get; set; }
 
         public NewItemPage()
         {

@@ -49,10 +49,10 @@ namespace TaskMonitor.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Task newItem = new Task()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
+                Name = Text,
                 Description = Description
             };
 
