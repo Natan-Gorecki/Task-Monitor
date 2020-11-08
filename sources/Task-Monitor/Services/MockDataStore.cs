@@ -14,12 +14,12 @@ namespace TaskMonitor.Services
         {
             items = new List<Models.Task>()
             {
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "First item", Description="This is an item description." },
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Second item", Description="This is an item description." },
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Third item", Description="This is an item description." },
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Fourth item", Description="This is an item description." },
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Fifth item", Description="This is an item description." },
-                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Sixth item", Description="This is an item description." }
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Wstać rano", Description="Wczesne rozpoczęcie dnia jest bardzo ważne i rzutuje na cały dzień." },
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Pójść do pracy", Description="O godzinie 8 otworzyć biuro i rozpocząć prace." },
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "8 godzin pracy", Description="Intensywna praca nad rozwojem rozpoczętych projektów." },
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Pouczyć się Xamarina", Description="Dalsze poznawanie środowiska i nowych kontrolek Xamarin.Forms." },
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Odpocząć", Description="Zregenerować siły i dać sobię chwilę wytchnienia." },
+                new Models.Task { Id = Guid.NewGuid().ToString(), Name = "Wyspać się", Description="Żeby dobrze rozpocząć kolejny dzień, trzeba pójść spać o wczenej porze." }
             };
         }
 

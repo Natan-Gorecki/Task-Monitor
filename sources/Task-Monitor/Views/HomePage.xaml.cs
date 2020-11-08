@@ -13,15 +13,15 @@ using TaskMonitor.ViewModels;
 
 namespace TaskMonitor.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class HomePage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        HomeViewModel _viewModel;
 
-        public ItemsPage()
+        public HomePage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new HomeViewModel();
         }
 
         protected override void OnAppearing()

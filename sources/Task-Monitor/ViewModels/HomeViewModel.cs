@@ -10,7 +10,7 @@ using TaskMonitor.Views;
 
 namespace TaskMonitor.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class HomeViewModel : BaseViewModel
     {
         private Models.Task _selectedItem;
 
@@ -19,9 +19,9 @@ namespace TaskMonitor.ViewModels
         public Command AddItemCommand { get; }
         public Command<Models.Task> ItemTapped { get; }
 
-        public ItemsViewModel()
+        public HomeViewModel()
         {
-            Title = "Browse";
+            Title = "Your Tasks";
             Items = new ObservableCollection<Models.Task>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
